@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PrimeraApp';
+  nombre = 'Biblioteca';
+  logo = "https://img.freepik.com/vector-premium/insignia-cafeteria-estilo-vintage_476121-80.jpg";
+
 }
