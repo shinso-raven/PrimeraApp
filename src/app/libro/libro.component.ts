@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { libro } from '../Model/Libro';
 
 @Component({
   selector: 'app-libro',
   templateUrl: './libro.component.html',
   styleUrls: ['./libro.component.css']
 })
-export class LibroComponent {
+export class LibroComponent  {
+  @Input()
+  librodatos!: libro;
+  
+  
+  
+  constructor(){
 
-    nombre = 'Haryy Potter y la piedra filosofal';
-    precio = 1000;
-    fotos = "https://www.cuestalibros.com/content/images/thumbs/0117872_harry-potter-y-la-piedra-filosofal-bol_550.jpeg"
-
+  }
+  OnInit(){
+    
+  }
+ 
 
 }

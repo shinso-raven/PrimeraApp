@@ -7,6 +7,13 @@
         <div class="col">
             <!--Form de consulta-->
           <h5>Categorias</h5>
+          <div class="container">
+            <div class="row">
+              <button type="button" class="btn btn-light text-start" *ngFor="let genero of generoslibros" >{{genero}}</button>
+              
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -17,31 +24,10 @@
         <br />
         <div class="container bg-light">
           <div class="row">
-            <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
-            </div> <div class=" col-sm-4 col-lg-3 col-xl-2">
-                <app-libro></app-libro>
+            <div class=" col-sm-4 col-lg-3 col-xl-2" *ngFor="let objlibro of libros">
+                <app-libro [librodatos]= "objlibro"   ></app-libro>
             </div> 
+            
           </div>
         </div>
       </div>

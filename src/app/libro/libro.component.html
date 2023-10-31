@@ -1,15 +1,21 @@
-
+<!DOCTYPE html>
+<!--
+  Esquema de la tarjeta.
+    Imagen
+    titulo
+    precio
+-->
     <div class="card my-2 w-100" style="max-width: 150px;" >
         <img
-          [src]=fotos
+          [src]="librodatos.images[0]"
           class="card-img-top"
           alt="..."
           
         />
         <div class="card-body text-start">
-          <h5 class="card-title fs-6">{{nombre}}</h5>
+          <h5 class="card-title fs-6">{{librodatos.title}}</h5>
           <p class="card-text fs-6" >
-            RD${{precio}}
+            RD${{librodatos.price}}
           </p>
         </div>
       </div>
