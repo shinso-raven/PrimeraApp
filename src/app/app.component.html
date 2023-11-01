@@ -35,8 +35,8 @@
               <a class="nav-link active m-2" aria-current="page" href="#"
                 >Inicio</a
               >
-              <a class="nav-link m-2" href="#">Tienda online</a>
-              <a class="nav-link mx-5" href="#"
+              <a class="nav-link m-2" routerLink="/TiendaVirtual"  >Tienda online</a>
+              <a class="nav-link mx-5" routerLink="/dashboard"
                 ><button type="button" class="btn btn-dark rounded-pill">
                   Reserva ahora
                 </button></a
@@ -72,8 +72,10 @@
         </div>
       </nav>
     </header>
+    <article>
     <div class="container">
-      <app-tienda-virtual></app-tienda-virtual>
+      <router-outlet></router-outlet>
     </div>
+  </article>
   </body>
 </html>

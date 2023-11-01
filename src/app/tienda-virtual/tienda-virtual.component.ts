@@ -1,16 +1,16 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { libro } from '../Model/Libro';
+import { LibreriaService } from '../libreria.service';
+
 
 @Component({
   selector: 'app-tienda-virtual',
   templateUrl: './tienda-virtual.component.html',
   styleUrls: ['./tienda-virtual.component.css']
 })
-export class TiendaVirtualComponent {
+export class TiendaVirtualComponent implements OnInit {
   
   libros: libro[] = [];
-  http = inject(HttpClient);
   generoslibros = [
     'comedia',
     'fantasia',
@@ -21,12 +21,16 @@ export class TiendaVirtualComponent {
     'Ciencia-ficción'
   ]
 
+  constructor(private productosService: LibreriaService){}
+
   ngOnInit(){
-    this.http.get<libro[]>('https://api.escuelajs.co/api/v1/products')
+    this.productosService.GetProductos()
     .subscribe( (data) =>{
       this.libros = data;
     })
-
   }
+
+
+
 
 }
